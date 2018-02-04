@@ -1,0 +1,4 @@
+markdown: redcarpet
+baseurl: /ferguevara
+exclude: ['README.md']
+comments: true
