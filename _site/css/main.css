@@ -357,6 +357,9 @@ footer h2 {
   .card {
     position: initial; }
 
+  .card::after, .card::before {
+    position: initial; }
+
   .summary {
     max-width: 950px;
     margin: 0 auto;
