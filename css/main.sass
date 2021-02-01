@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,800)
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800)
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap')
 
 *, *:before, *:after
@@ -15,16 +15,19 @@ html
   box-sizing: border-box
   font-family: 'Raleway', sans-serif
   color: rgba(0,0,0,0.70)
+  background: #FEF9F7
 
 // colors
 
-$first: #76AADB
+$first: #62BFE1
 
-$second: #FF9100
+$second: #DD9ABA
 
-$third: #FFCC00
+$third: #EDD15D
 
-$fourth: #F9F8F7
+$fourth: #91DDCB
+
+$fifth: #F9F8F7
 
 $dark-70: rgba(0, 0, 0, 0.7)
 
@@ -58,6 +61,7 @@ p
 a
   font-size: 18px 
   text-decoration: none
+  font-weight: 500
   color: $second
   
 a:hover
@@ -107,6 +111,26 @@ hr
   font-weight: bold
   display: inline-block
   transition: all 250ms ease
+  &--main
+    background: $first
+    color: white
+    font-weight: 500
+    text-align: center
+    padding: 16px 25px
+    border-radius: 12px
+    margin: 20px
+    -webkit-box-shadow: 0px 8px 25px -10px rgba(0,0,0,0.15)
+    -moz-box-shadow: 0px 8px 25px -10px rgba(0,0,0,0.15)
+    box-shadow: 0px 8px 25px -10px rgba(0,0,0,0.15)
+    transition: all 0.3s ease-out
+  &--main:hover
+    background: $first
+    color: white
+    text-decoration: none
+    transform: translate(0, -3px)
+    webkit-box-shadow: 0px 8px 17px -9px rgba(0,0,0,0.40)
+    -moz-box-shadow: 0px 8px 17px -9px rgba(0,0,0,0.40)
+    box-shadow: 0px 8px 17px -9px rgba(0,0,0,0.40)
   &--white
     background: white
     color: $dark-50
@@ -166,20 +190,24 @@ nav
   display: flex
   color: $dark-70
   align-items: center
+  & h4
+    font-size: 26px
+    letter-spacing: -1px
  
 .avatar
-  width: 35px
+  width: 135px
   border-radius: 100em
-  margin: 0px 12px 
+  margin: 0px 60px 0px 12px
+
 
 .hero
-  max-width: 900px
+  max-width: 1000px
   margin: 0 auto
   text-align: center
-  padding: 50px 10px
+  padding: 25px 10px 80px
 
   h1
-    font-size: 80px
+    font-size: 75px
     font-weight: 900
     line-height: 82px
     text-align: center
@@ -192,8 +220,8 @@ nav
 
 
 .card
-  max-width: 155px
-  min-height: 155px
+  max-width: 200px
+  min-height: 175px
   font-size: 22px
   text-align: center
   font-weight: bold
@@ -202,7 +230,10 @@ nav
   margin: 10px
   color: $dark-50
   font-family: 'Kalam', sans-serif
-  line-height: 27px
+  line-height: 22px
+
+  img
+    padding-top: 10px 
 
 .card::after, .card::before
   position: absolute
@@ -211,12 +242,12 @@ nav
   height: 100px
   z-index: -1
 .card:before
-  top: 45px
+  top: 100px
   left: 0
   transform: rotate(-5deg)
   box-shadow: 6px 8px 8px #929292
 .card:after
-  top: 45px
+  top: 100px
   right: 0
   transform: rotate(5deg)
   box-shadow: -6px 8px 8px #929292
@@ -319,7 +350,7 @@ nav
       padding: 10px 0
       & li
         display: inline-block
-        background: $fourth
+        background: white
         padding: 10px 25px
         border-radius: 100px
         margin: 15px 8px 0 0
@@ -345,7 +376,7 @@ nav
     text-align: center
     border-radius: 20px
     font-weight: 800
-    background: $fourth
+    background: white
   &__pdf
     width: 25px
     margin: 0 10px
@@ -357,18 +388,19 @@ footer
 
 .footer__wrapper
   display: flex
-  width: 900px
+  width: 795px
   align-items: center
   justify-content: center
   flex-direction: column
   height: 300px
-  background: $dark-50
+  background: #ffffff url('../img/cta-bg.svg') no-repeat center
   border-radius: 20px
   padding: 30px 50px
+  border: 1px solid $dark-12
  
 footer h2 
   text-align: center
-  color: white
+  color: $dark-70
   font-weight: bold
   max-width: 450px
   
@@ -379,7 +411,8 @@ footer h2
     height: auto
     
   .hero h1
-    font-size: 60px
+    font-size: 48px
+    line-height: 60px
     
   .hero__message
     width: 80%
